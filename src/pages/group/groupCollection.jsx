@@ -10,7 +10,7 @@ export function GroupCollection () {
         <Link to={"/groupProfile"}>
             <button>Group Profile</button>
         </Link>
-        <Link to={"/groupCollection"}>
+        <Link to={"/worldProfile"}>
             <button>Return</button>
         </Link>
     </>
