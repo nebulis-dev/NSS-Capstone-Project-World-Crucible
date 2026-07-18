@@ -1,141 +1,146 @@
 {
-    "Users": [
-        {
-            "id": 1,
-            "userName": "Example Name",
-            "password": "example123"
-        },
-        {
-            "id": 2,
-            "userName": "Evil Example Name",
-            "password": "321elpmaxe"
-        }
-    ],
-    "Worlds": [
-        {
-            "id": 1,
-            "userId": 1,
-            "name": "Example World",
-            "description": "Really Cool Description",
-            "worldImg": "/worldImgs/ExampleWorld.png"
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "name": "The Cooler Example World",
-            "description": "Even Cooler Description",
-            "worldImg": "/worldImgs/CoolerExampleWorld.png"
-        },
-        {
-            "id": 3,
-            "userId": 2,
-            "name": "Evil Example World",
-            "description": "Really Evil Description",
-            "worldImg": "/worldImgs/EvilExampleWorld.png"
-        },
-        {
-            "id": 4,
-            "userId": 2,
-            "name": "Cooler Evil Example World",
-            "description": "Cooler Really Evil Description",
-            "worldImg": "/worldImgs/CoolerEvilExampleWorld.png"
-        }
-    ],
-    "Groups": [
-        {
-            "id": 1,
-            "worldId": 1,
-            "name": "Cool Group",
-            "description": "Cool Decription"
-        },
-        {
-            "id": 2,
-            "worldId": 1,
-            "name": "Cooler Group",
-            "description": "Cooler Description"
-        }
-    ],
-    "Characters": [
-        {
-            "id": 1,
-            "userId": 1,
-            "worldId": 1,
-            "name": "Daniel",
-            "genderId": 1,
-            "biography": "average description",
-            "characterImg": "/characterImgs/Daniel.png"
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "worldId": 1,
-            "name": "The Cooler Daniel",
-            "genderId": 1,
-            "biography": "literally the coolest description",
-            "characterImg": "/characterImgs/CoolerDaniel.png"
-        },
-        {
-            "id": 3,
-            "userId": 1,
-            "worldId": 1,
-            "name": "A Platypus",
-            "genderId": 1,
-            "biography": "literally just a platypus",
-            "characterImg": "/characterImgs/ThePlatypus.png"
-        },
-        {
-            "id": 4,
-            "userId": 1,
-            "worldId": 1,
-            "name": "Perry the Platypus",
-            "genderId": 1,
-            "biography": "wait... PERRY THE PLATYPUS!???????",
-            "characterImg": "/characterImgs/PerryThePlatypus.png"
-        },
-        {
-            "id": 5,
-            "userId": 2,
-            "worldId": null,
-            "name": "literally just Doomguy",
-            "genderId": 1,
-            "biography": "Doomguy",
-            "characterImg": "/characterImgs/Doomguy.png"
-        }
-    ],
-    "Character_Groups": [
-        {
-            "characterId": 1,
-            "groupId": 1
-        },
-        {
-            "characterId": 2,
-            "groupId": 2
-        },
-        {
-            "characterId": 3,
-            "groupId": 1
-        },
-        {
-            "characterId": 4,
-            "groupId": 2
-        },
-        {
-            "characterId": 3,
-            "groupId": 2
-        }
-    ],
-    "Genders": [
-        {
-            "id": 1,
-            "gender": "male"
-        },
-        {
-            "id": 2,
-            "gender": "female"
-        },
-        {
-            "id": 3,
-            "gender": "NonBinary/Other"
-        }
-    ]
+  "Users": [
+    {
+      "id": 1,
+      "userName": "Example Name",
+      "password": "example123"
+    },
+    {
+      "id": 2,
+      "userName": "Evil Example Name",
+      "password": "321elpmaxe"
+    },
+    {
+      "id": 3,
+      "userName": "Micheal ",
+      "password": "Jordan"
+    }
+  ],
+  "Worlds": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Example World",
+      "description": "Really Cool Description",
+      "worldImg": "/worldImgs/ExampleWorld.png"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "The Cooler Example World",
+      "description": "Even Cooler Description",
+      "worldImg": "/worldImgs/CoolerExampleWorld.png"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "Evil Example World",
+      "description": "Really Evil Description",
+      "worldImg": "/worldImgs/EvilExampleWorld.png"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "name": "Cooler Evil Example World",
+      "description": "Cooler Really Evil Description",
+      "worldImg": "/worldImgs/CoolerEvilExampleWorld.png"
+    }
+  ],
+  "Groups": [
+    {
+      "id": 1,
+      "worldId": 1,
+      "name": "Cool Group",
+      "description": "Cool Decription"
+    },
+    {
+      "id": 2,
+      "worldId": 1,
+      "name": "Cooler Group",
+      "description": "Cooler Description"
+    }
+  ],
+  "Characters": [
+    {
+      "id": 1,
+      "userId": 1,
+      "worldId": 1,
+      "name": "Daniel",
+      "genderId": 1,
+      "biography": "average description",
+      "characterImg": "/characterImgs/Daniel.png"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "worldId": 1,
+      "name": "The Cooler Daniel",
+      "genderId": 1,
+      "biography": "literally the coolest description",
+      "characterImg": "/characterImgs/CoolerDaniel.png"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "worldId": 1,
+      "name": "A Platypus",
+      "genderId": 1,
+      "biography": "literally just a platypus",
+      "characterImg": "/characterImgs/ThePlatypus.png"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "worldId": 1,
+      "name": "Perry the Platypus",
+      "genderId": 1,
+      "biography": "wait... PERRY THE PLATYPUS!???????",
+      "characterImg": "/characterImgs/PerryThePlatypus.png"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "worldId": null,
+      "name": "literally just Doomguy",
+      "genderId": 1,
+      "biography": "Doomguy",
+      "characterImg": "/characterImgs/Doomguy.png"
+    }
+  ],
+  "Character_Groups": [
+    {
+      "characterId": 1,
+      "groupId": 1
+    },
+    {
+      "characterId": 2,
+      "groupId": 2
+    },
+    {
+      "characterId": 3,
+      "groupId": 1
+    },
+    {
+      "characterId": 4,
+      "groupId": 2
+    },
+    {
+      "characterId": 3,
+      "groupId": 2
+    }
+  ],
+  "Genders": [
+    {
+      "id": 1,
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "gender": "female"
+    },
+    {
+      "id": 3,
+      "gender": "NonBinary/Other"
+    }
+  ]
 }
