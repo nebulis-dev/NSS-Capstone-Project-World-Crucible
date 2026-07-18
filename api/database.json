@@ -1,0 +1,122 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "userName": "Example Name",
+            "passWord": "example123"
+        },
+        {
+            "id": 2,
+            "userName": "Evil Example Name",
+            "passWord": "321elpmaxe"
+        }
+    ],
+    "worlds": [
+        {
+            "id": 1,
+            "userId": 1,
+            "name": "Example World",
+            "description": "Really Cool Description",
+            "worldImg": "./src/assets/worldImgs/ExampleWorld.png"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "name": "The Cooler Example World",
+            "description": "Even Cooler Description",
+            "worldImg": "./src/assets/worldImgs/CoolerExampleWorld.png"
+        },
+        {
+            "id": 3,
+            "userId": 2,
+            "name": "Evil Example World",
+            "description": "Really Evil Description",
+            "worldImg": "./src/assets/worldImgs/EvilExampleWorld.png"
+        },
+        {
+            "id": 4,
+            "userId": 2,
+            "name": "Cooler Evil Example World",
+            "description": "Cooler Really Evil Description",
+            "worldImg": "./src/assets/worldImgs/CoolerEvilExampleWorld.png"
+        }
+    ],
+    "groups": [
+        {
+            "id": 1,
+            "worldId": 1,
+            "name": "Cool Group",
+            "description": "Cool Decription"
+        },
+        {
+            "id": 2,
+            "worldId": 1,
+            "name": "Cooler Group",
+            "description": "Cooler Description"
+        }
+    ],
+    "Characters": [
+        {
+            "id": 1,
+            "userId": 1,
+            "worldId": 1,
+            "name": "Daniel",
+            "gender": "male",
+            "biography": "average description"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "worldId": 1,
+            "name": "The Cooler Daniel",
+            "gender": "male",
+            "biography": "literally the coolest description"
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "worldId": 1,
+            "name": "A Platypus",
+            "gender": "male",
+            "biography": "literally just a platypus"
+        },
+        {
+            "id": 4,
+            "userId": 1,
+            "worldId": 1,
+            "name": "Perry the Platypus",
+            "gender": "male",
+            "biography": "wait... PERRY THE PLATYPUS!???????"
+        },
+        {
+            "id": 5,
+            "userId": 2,
+            "worldId": null,
+            "name": "literally just Doomguy",
+            "gender": "male",
+            "biography": "Doomguy"
+        }
+    ],
+    "Character_Groups": [
+        {
+            "characterId": 1,
+            "groupId": 1
+        },
+        {
+            "characterId": 2,
+            "groupId": 2
+        },
+        {
+            "characterId": 3,
+            "groupId": 1
+        },
+        {
+            "characterId": 4,
+            "groupId": 2
+        },
+        {
+            "characterId": 3,
+            "groupId": 2
+        }
+    ]
+}
