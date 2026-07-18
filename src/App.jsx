@@ -1,6 +1,9 @@
 import './App.css'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { Hub } from './pages/Hub'
+import { StartPage } from './pages/StartPage'
+import { Register } from './components/Register'
+import { Login } from './components/Login'
 import { CharacterCollection } from './pages/character/characterCollection'
 import { CharacterCreation } from './pages/character/characterCreation'
 import { CharacterProfile } from './pages/character/characterProfile'
@@ -19,7 +22,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hub/>}/>
+        <Route path='/' element={<StartPage/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path="/hub" element={<Hub/>}/>
         <Route path="/characterCreation" element={<CharacterCreation/>}/>
         <Route path="/characterCollection" element={<CharacterCollection/>}/>
         <Route path="/characterProfile" element={<CharacterProfile/>}/>

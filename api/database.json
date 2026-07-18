@@ -3,12 +3,12 @@
         {
             "id": 1,
             "userName": "Example Name",
-            "passWord": "example123"
+            "password": "example123"
         },
         {
             "id": 2,
             "userName": "Evil Example Name",
-            "passWord": "321elpmaxe"
+            "password": "321elpmaxe"
         }
     ],
     "Worlds": [
