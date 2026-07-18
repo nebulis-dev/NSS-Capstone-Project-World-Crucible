@@ -17,28 +17,28 @@
             "userId": 1,
             "name": "Example World",
             "description": "Really Cool Description",
-            "worldImg": "./src/assets/worldImgs/ExampleWorld.png"
+            "worldImg": "/worldImgs/ExampleWorld.png"
         },
         {
             "id": 2,
             "userId": 1,
             "name": "The Cooler Example World",
             "description": "Even Cooler Description",
-            "worldImg": "./src/assets/worldImgs/CoolerExampleWorld.png"
+            "worldImg": "/worldImgs/CoolerExampleWorld.png"
         },
         {
             "id": 3,
             "userId": 2,
             "name": "Evil Example World",
             "description": "Really Evil Description",
-            "worldImg": "./src/assets/worldImgs/EvilExampleWorld.png"
+            "worldImg": "/worldImgs/EvilExampleWorld.png"
         },
         {
             "id": 4,
             "userId": 2,
             "name": "Cooler Evil Example World",
             "description": "Cooler Really Evil Description",
-            "worldImg": "./src/assets/worldImgs/CoolerEvilExampleWorld.png"
+            "worldImg": "/worldImgs/CoolerEvilExampleWorld.png"
         }
     ],
     "Groups": [
@@ -63,7 +63,7 @@
             "name": "Daniel",
             "genderId": 1,
             "biography": "average description",
-            "characterImg": "./src/assets/characterImgs/Daniel.png"
+            "characterImg": "/characterImgs/Daniel.png"
         },
         {
             "id": 2,
@@ -72,7 +72,7 @@
             "name": "The Cooler Daniel",
             "genderId": 1,
             "biography": "literally the coolest description",
-            "characterImg": "./src/assets/characterImgs/CoolerDaniel.png"
+            "characterImg": "/characterImgs/CoolerDaniel.png"
         },
         {
             "id": 3,
@@ -81,7 +81,7 @@
             "name": "A Platypus",
             "genderId": 1,
             "biography": "literally just a platypus",
-            "characterImg": "./src/assets/characterImgs/ThePlatypus.png"
+            "characterImg": "/characterImgs/ThePlatypus.png"
         },
         {
             "id": 4,
@@ -90,7 +90,7 @@
             "name": "Perry the Platypus",
             "genderId": 1,
             "biography": "wait... PERRY THE PLATYPUS!???????",
-            "characterImg": "./src/assets/characterImgs/PerryThePlatypus.png"
+            "characterImg": "/characterImgs/PerryThePlatypus.png"
         },
         {
             "id": 5,
@@ -99,7 +99,7 @@
             "name": "literally just Doomguy",
             "genderId": 1,
             "biography": "Doomguy",
-            "characterImg": "./src/assets/characterImgs/Doomguy.png"
+            "characterImg": "/characterImgs/Doomguy.png"
         }
     ],
     "Character_Groups": [
