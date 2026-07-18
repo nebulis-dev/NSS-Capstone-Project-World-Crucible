@@ -1,5 +1,5 @@
 {
-    "users": [
+    "Users": [
         {
             "id": 1,
             "userName": "Example Name",
@@ -11,7 +11,7 @@
             "passWord": "321elpmaxe"
         }
     ],
-    "worlds": [
+    "Worlds": [
         {
             "id": 1,
             "userId": 1,
@@ -41,7 +41,7 @@
             "worldImg": "./src/assets/worldImgs/CoolerEvilExampleWorld.png"
         }
     ],
-    "groups": [
+    "Groups": [
         {
             "id": 1,
             "worldId": 1,
@@ -61,40 +61,45 @@
             "userId": 1,
             "worldId": 1,
             "name": "Daniel",
-            "gender": "male",
-            "biography": "average description"
+            "genderId": 1,
+            "biography": "average description",
+            "characterImg": "./src/assets/characterImgs/Daniel.png"
         },
         {
             "id": 2,
             "userId": 1,
             "worldId": 1,
             "name": "The Cooler Daniel",
-            "gender": "male",
-            "biography": "literally the coolest description"
+            "genderId": 1,
+            "biography": "literally the coolest description",
+            "characterImg": "./src/assets/characterImgs/CoolerDaniel.png"
         },
         {
             "id": 3,
             "userId": 1,
             "worldId": 1,
             "name": "A Platypus",
-            "gender": "male",
-            "biography": "literally just a platypus"
+            "genderId": 1,
+            "biography": "literally just a platypus",
+            "characterImg": "./src/assets/characterImgs/ThePlatypus.png"
         },
         {
             "id": 4,
             "userId": 1,
             "worldId": 1,
             "name": "Perry the Platypus",
-            "gender": "male",
-            "biography": "wait... PERRY THE PLATYPUS!???????"
+            "genderId": 1,
+            "biography": "wait... PERRY THE PLATYPUS!???????",
+            "characterImg": "./src/assets/characterImgs/PerryThePlatypus.png"
         },
         {
             "id": 5,
             "userId": 2,
             "worldId": null,
             "name": "literally just Doomguy",
-            "gender": "male",
-            "biography": "Doomguy"
+            "genderId": 1,
+            "biography": "Doomguy",
+            "characterImg": "./src/assets/characterImgs/Doomguy.png"
         }
     ],
     "Character_Groups": [
@@ -117,6 +122,20 @@
         {
             "characterId": 3,
             "groupId": 2
+        }
+    ],
+    "Genders": [
+        {
+            "id": 1,
+            "gender": "male"
+        },
+        {
+            "id": 2,
+            "gender": "female"
+        },
+        {
+            "id": 3,
+            "gender": "NonBinary/Other"
         }
     ]
 }
