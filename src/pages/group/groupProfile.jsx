@@ -4,7 +4,7 @@ export function GroupProfile () {
     return (
     <>
         <h2>this is Group Profile Page</h2>
-        <Link to={"/characterCollection"}>
+        <Link to={"/worldProfile/:worldId/groupProfile/:groupId/characterCollection"}>
             <button>Group Characters</button>
         </Link>
         <Link to={"/worldProfile"}>

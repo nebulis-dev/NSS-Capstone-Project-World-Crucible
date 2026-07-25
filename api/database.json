@@ -9,11 +9,6 @@
       "id": 2,
       "userName": "Evil Example Name",
       "password": "321elpmaxe"
-    },
-    {
-      "id": 3,
-      "userName": "Micheal ",
-      "password": "Jordan"
     }
   ],
   "Worlds": [
@@ -107,7 +102,7 @@
       "characterImg": "/characterImgs/Doomguy.png"
     }
   ],
-  "Character_Groups": [
+  "CharacterGroups": [
     {
       "characterId": 1,
       "groupId": 1
@@ -132,11 +127,11 @@
   "Genders": [
     {
       "id": 1,
-      "gender": "male"
+      "gender": "Male"
     },
     {
       "id": 2,
-      "gender": "female"
+      "gender": "Female"
     },
     {
       "id": 3,

@@ -10,7 +10,7 @@ export function WorldProfile () {
         <Link to={"/groupCollection"}>
             <button>Group Collection</button>
         </Link>
-        <Link to={"/characterCollection"}>
+        <Link to={"/worldProfile/:worldId/characterCollection"}>
             <button>Character Collection</button>
         </Link>
     </>
