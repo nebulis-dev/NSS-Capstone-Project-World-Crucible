@@ -2,9 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { getUsers } from "../assets/userManagement";
+import { UserAuth } from "../assets/currentUser";
 
 export function Login() {
     const navigate = useNavigate()
+    const { login } = UserAuth()
     const {
         register,
         handleSubmit,
@@ -22,6 +24,7 @@ export function Login() {
             console.log("Username found")
             if (userNameMatch.password === data.password) {
                 console.log("Password found")
+                login(userNameMatch)
                 navigate("/hub")
             } else {
                 console.log("Incorrect Password")

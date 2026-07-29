@@ -46,13 +46,19 @@
       "id": 1,
       "worldId": 1,
       "name": "Cool Group",
-      "description": "Cool Decription"
+      "description": "Cool Description"
     },
     {
       "id": 2,
       "worldId": 1,
       "name": "Cooler Group",
       "description": "Cooler Description"
+    },
+    {
+      "id": 3,
+      "worldId": 2,
+      "name": "Badass Group",
+      "description": "it has Sol Badguy and Doomguy in it, what else is there to say?"
     }
   ],
   "Characters": [
@@ -68,7 +74,7 @@
     {
       "id": 2,
       "userId": 1,
-      "worldId": 1,
+      "worldId": 2,
       "name": "The Cooler Daniel",
       "genderId": 1,
       "biography": "literally the coolest description",
@@ -86,7 +92,7 @@
     {
       "id": 4,
       "userId": 1,
-      "worldId": 1,
+      "worldId": 2,
       "name": "Perry the Platypus",
       "genderId": 1,
       "biography": "wait... PERRY THE PLATYPUS!???????",
@@ -95,11 +101,56 @@
     {
       "id": 5,
       "userId": 2,
-      "worldId": null,
+      "worldId": 4,
       "name": "literally just Doomguy",
       "genderId": 1,
       "biography": "Doomguy",
       "characterImg": "/characterImgs/Doomguy.png"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "worldId": 1,
+      "name": "Charlie",
+      "genderId": 1,
+      "biography": "average description",
+      "characterImg": "/characterImgs/Charlie.png"
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "worldId": 2,
+      "name": "The Cooler Charlie",
+      "genderId": 1,
+      "biography": "literally the coolest description",
+      "characterImg": "/characterImgs/CoolerCharlie.png"
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "worldId": 1,
+      "name": "A Badguy",
+      "genderId": 1,
+      "biography": "Sal Averagedude",
+      "characterImg": "/characterImgs/StereotypicalVillain.png"
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "worldId": 2,
+      "name": "SOL BADGUY",
+      "genderId": 1,
+      "biography": "SOL BADGUY FROM HIT SERIES GUILTY GEAR!??????",
+      "characterImg": "/characterImgs/GGSTSolBadguyPortrait.png"
+    },
+    {
+      "id": 10,
+      "userId": 2,
+      "worldId": 3,
+      "name": "literally just Joyguy",
+      "genderId": 3,
+      "biography": "Joyguy",
+      "characterImg": "/characterImgs/UnicornDoomGuy(Joyguy).png"
     }
   ],
   "CharacterGroups": [
@@ -122,6 +173,14 @@
     {
       "characterId": 3,
       "groupId": 2
+    },
+    {
+      "characterId": 9,
+      "groupId": 3
+    },
+    {
+      "characterId": 5,
+      "groupId": 3
     }
   ],
   "Genders": [

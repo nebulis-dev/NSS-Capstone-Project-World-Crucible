@@ -1,16 +1,31 @@
 import { Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
+import { useState } from "react"
+import { useEffect } from "react"
 
 export function WorldProfile () {
+    const { worldId } = useParams()
+    const[world, setWorld] = useState(null)
+
+    useEffect(() => {
+        fetch(`http://localhost:8088/Worlds/${worldId}`)
+        .then(res => res.json())
+        .then(setWorld)
+    }, [worldId])
+
+    if(!world) return <p>Loading...</p>
+
     return (
     <>
-        <h2>this is World Profile Page</h2>
+        <img src={world.worldImg} alt={world.name} width="728" height="90"/>
+        <h2>this is {world.name} Profile Page</h2>
         <Link to={"/worldCollection"}>
             <button>Return</button>
         </Link>
-        <Link to={"/groupCollection"}>
+        <Link to={`/worldProfile/${worldId}/groupCollection`}>
             <button>Group Collection</button>
         </Link>
-        <Link to={"/worldProfile/:worldId/characterCollection"}>
+        <Link to={`/worldProfile/${worldId}/characterCollection`}>
             <button>Character Collection</button>
         </Link>
     </>

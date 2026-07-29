@@ -24,9 +24,24 @@ export function CharacterEditor  () {
         getCharacter(characterId).then(setCharacter)
     }, [characterId])
 
-    if(!character) return <p>Loading...</p>
+    useEffect(() => {
+        if (!character) return
 
-    const Return = character.groupId ? `/worldProfile/${character.worldId}/groupProfile/${character.groupId}` : `/worldProfile/${character.worldId}`
+        getWorldGroups(character.worldId).then(setGroups)
+        getGenders().then(setGenders)
+
+        getCharacterGroups(character.id).then(existingLinks => {
+            reset({
+                name: character.name,
+                biography: character.biography,
+                characterImg: character.characterImg,
+                genderId: character.genderId,
+                groupIds: existingLinks.map(link => String(link.groupId))
+            })
+        })
+    })
+
+    if(!character) return <p>Loading...</p>
 
     return (
     <>

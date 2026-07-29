@@ -1,16 +1,33 @@
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { UserAuth } from "../../assets/currentUser"
 
 export function WorldCollection () {
+    const { user } = UserAuth()
+    const [worlds, setWorlds] = useState([])
+
+    useEffect(() => {
+        if (!user) return
+        fetch(`http://localhost:8088/Worlds?userId=${user.id}`)
+        .then(res => res.json())
+        .then(setWorlds)
+    }, [user])
+
     return (
     <>
         <h2>this is the World Collection Page</h2>
-        <Link to={"/worldProfile"}>
-            <button>World Profile</button>
-        </Link>
+
+        {worlds.map(world => (
+            <Link key={world.id} to={`/worldProfile/${world.id}`}>
+                <button>{world.name}</button>
+            </Link>
+        ))}
+
         <Link to={"/worldCreation"}>
             <button>World Creator</button>
         </Link>
-        <Link to={"/"}>
+
+        <Link to={"/hub"}>
             <button>Return</button>
         </Link>
     </>

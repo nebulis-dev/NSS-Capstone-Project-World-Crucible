@@ -16,47 +16,50 @@ import { WorldCollection } from './pages/world/worldCollection'
 import { WorldCreation } from './pages/world/worldCreation'
 import { WorldProfile } from './pages/world/worldProfile'
 import { WorldEditor } from './pages/world/worldEdit'
+import { AuthProvider } from './assets/currentUser'
 
 function App() {
 
   return (
-    <Router>
-      <Routes>
-        {/*Start Pages*/}
-        <Route path='/' element={<StartPage/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path="/hub" element={<Hub/>}/>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/*Start Pages*/}
+          <Route path='/' element={<StartPage/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path="/hub" element={<Hub/>}/>
 
-        {/*Character Creation Pages*/}
-        <Route path="/worldProfile/:worldId/groupProfile/:groupId/characterCreation" element={<CharacterCreation/>}/>
-        <Route path="/worldProfile/:worldId/characterCreation" element={<CharacterCreation/>}/>
-        <Route path="/characterCreation" element={<CharacterCreation/>}/>
+          {/*Character Creation Pages*/}
+          <Route path="/worldProfile/:worldId/groupProfile/:groupId/characterCreation" element={<CharacterCreation/>}/>
+          <Route path="/worldProfile/:worldId/characterCreation" element={<CharacterCreation/>}/>
+          <Route path="/characterCreation" element={<CharacterCreation/>}/>
 
-        {/*Character Profile Page*/}
-        <Route path="/characterProfile/:characterId" element={<CharacterProfile/>}/>
+          {/*Character Profile Page*/}
+          <Route path="/characterProfile/:characterId" element={<CharacterProfile/>}/>
 
-        {/*Character Edit Pages*/}
-        <Route path="/characterEditor/:characterId" element={<CharacterEditor/>}/>
+          {/*Character Edit Pages*/}
+          <Route path="/characterEditor/:characterId" element={<CharacterEditor/>}/>
         
-        {/*Character Collection Pages*/}
-        <Route path="/worldProfile/:worldId/groupProfile/:groupId/characterCollection" element={<CharacterCollection/>}/>
-        <Route path="/worldProfile/:worldId/characterCollection" element={<CharacterCollection/>}/>
-        <Route path="characterCollection" element={<CharacterCollection/>}/>
+          {/*Character Collection Pages*/}
+          <Route path="/worldProfile/:worldId/groupProfile/:groupId/characterCollection" element={<CharacterCollection/>}/>
+          <Route path="/worldProfile/:worldId/characterCollection" element={<CharacterCollection/>}/>
+          <Route path="characterCollection" element={<CharacterCollection/>}/>
 
-        {/*Group Pages */}
-        <Route path="/worldProfile/:worldId/groupCreation" element={<GroupCreation/>}/>
-        <Route path="/worldProfile/:worldId/groupProfile/:groupId" element={<GroupProfile/>}/>
-        <Route path="/worldProfile/:worldId/groupProfile/:groupId/groupEditor" element={<GroupEditor/>}/>
-        <Route path="/worldProfile/:worldId/groupCollection" element={<GroupCollection/>}/>
+          {/*Group Pages */}
+          <Route path="/worldProfile/:worldId/groupCreation" element={<GroupCreation/>}/>
+          <Route path="/worldProfile/:worldId/groupProfile/:groupId" element={<GroupProfile/>}/>
+          <Route path="/worldProfile/:worldId/groupProfile/:groupId/groupEditor" element={<GroupEditor/>}/>
+          <Route path="/worldProfile/:worldId/groupCollection" element={<GroupCollection/>}/>
 
-        {/*World Pages*/}
-        <Route path="/worldCreation" element={<WorldCreation/>}/>
-        <Route path="/worldProfile/:worldId" element={<WorldProfile/>}/>
-        <Route path="/worldProfile/:worldId/worldEditor" element={<WorldEditor/>}/>
-        <Route path="/worldCollection" element={<WorldCollection/>}/>
-      </Routes>
-    </Router>
+          {/*World Pages*/}
+          <Route path="/worldCreation" element={<WorldCreation/>}/>
+          <Route path="/worldProfile/:worldId" element={<WorldProfile/>}/>
+          <Route path="/worldProfile/:worldId/worldEditor" element={<WorldEditor/>}/>
+          <Route path="/worldCollection" element={<WorldCollection/>}/>
+        </Routes>
+      </Router>
+    </AuthProvider>
   )
 
 }

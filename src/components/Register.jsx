@@ -2,9 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { getUsers, registerUser } from "../assets/userManagement";
+import { UserAuth } from "../assets/currentUser";
 
 export function Register() {
     const navigate = useNavigate()
+    const { login } = UserAuth()
     const {
         register,
         handleSubmit,
@@ -33,8 +35,9 @@ export function Register() {
         const response = await registerUser(newUser)
 
         if (response.ok) {
-            console.log(data.userName + " has registered their account successfully")
+            console.log(data.userName + " has successfully registered an account!")
             navigate("/hub")
+            login(newUser)
         } else {
             console.log("something went wrong")
             alert("Sorry, there seems to be an issue on our end")
