@@ -88,3 +88,11 @@ export function getCollectionPath(character) {
         fallback: `/characterCollection`
     })
 }
+
+export function getParentPath(character) {
+    return scopeGetter(character, {
+        group: `/worldProfile/${character.worldId}/groupProfile/${character.groupId}`,
+        world: `/worldProfile/${character.worldId}`,
+        fallback: `/hub`
+    })
+}

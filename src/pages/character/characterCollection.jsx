@@ -1,11 +1,10 @@
-import { Link, useParams, useLocation } from "react-router-dom"
+import { Link, useParams, } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { UserAuth } from "../../assets/currentUser"
-import { getGroupCharacters, scopeGetter, getCollectionPath } from "../../../api/dataTranslation"
+import { getGroupCharacters, scopeGetter, getParentPath } from "../../../api/dataTranslation"
 
 export function CharacterCollection () {
     const { worldId, groupId } = useParams()
-    const location = useLocation()
     const { user } = UserAuth()
     const [characters, setCharacters] = useState([])
 
@@ -46,7 +45,7 @@ export function CharacterCollection () {
             <button>Go To Hub</button>
         </Link>
 
-        <Link to={groupId ? `/worldProfile/${worldId}/groupProfile/${groupId}` : `/worldProfile/${worldId}`}>
+        <Link to={getParentPath({ worldId, groupId })}>
             <button>Return</button>
         </Link>
     </>
