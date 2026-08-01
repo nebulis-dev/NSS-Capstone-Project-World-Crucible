@@ -8,6 +8,7 @@ import { CharacterCollection } from './pages/character/characterCollection'
 import { CharacterCreation } from './pages/character/characterCreation'
 import { CharacterProfile } from './pages/character/characterProfile'
 import { CharacterEditor } from './pages/character/characterEdit'
+import { CharacterDelete } from './pages/character/characterDelete'
 import { GroupCollection } from './pages/group/groupCollection'
 import { GroupCreation } from './pages/group/groupCreation'
 import { GroupProfile } from './pages/group/groupProfile'
@@ -38,8 +39,9 @@ function App() {
           {/*Character Profile Page*/}
           <Route path="/characterProfile/:characterId" element={<CharacterProfile/>}/>
 
-          {/*Character Edit Pages*/}
+          {/*Character Edit and Delete Pages*/}
           <Route path="/characterEditor/:characterId" element={<CharacterEditor/>}/>
+          <Route path="/characterDelete/:characterId" element={<CharacterDelete/>}/>
         
           {/*Character Collection Pages*/}
           <Route path="/worldProfile/:worldId/groupProfile/:groupId/characterCollection" element={<CharacterCollection/>}/>

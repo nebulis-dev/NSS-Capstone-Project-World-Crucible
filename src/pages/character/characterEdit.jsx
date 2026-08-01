@@ -25,7 +25,8 @@ export function CharacterEditor() {
     const { register, control, handleSubmit, reset, setValue } = useForm()
 
     useEffect(() => {
-        getCharacter(characterId).then(setCharacter)
+        getCharacter(characterId)
+        .then(setCharacter)
     }, [characterId])
 
     useEffect(() => {
@@ -69,7 +70,8 @@ export function CharacterEditor() {
         editCharacter(characterId, {
             ...characterFields,
             genderId: Number(characterFields.genderId)
-        }).then(() => {
+        })
+        .then(() => {
             getCharacterGroups(characterId).then(existingLinks => {
                 const existingGroupIds = existingLinks.map(link => link.groupId)
 
@@ -79,7 +81,8 @@ export function CharacterEditor() {
                 Promise.all([
                     ...toAdd.map(groupId => createCharacterGrouping(Number(characterId), groupId)),
                     ...toRemove.map(link => deleteCharacterGrouping(link.id))
-                ]).then(() => {
+                ])
+                .then(() => {
                     navigate(`/characterProfile/${characterId}`)
                 })
             })

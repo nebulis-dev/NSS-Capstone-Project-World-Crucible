@@ -1,7 +1,6 @@
 import { Link, useParams, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { getCharacter, getGenders } from "../../../api/dataTranslation"
-import { getCollectionPath } from "../../../api/dataTranslation"
+import { getCharacter, getGenders, getCollectionPath } from "../../../api/dataTranslation"
 
 export function CharacterProfile () {
     const location = useLocation()
@@ -38,6 +37,9 @@ export function CharacterProfile () {
         </Link>
         <Link to={`/characterEditor/${character.id}`}>
             <button>Edit</button>
+        </Link>
+        <Link to={`/characterDelete/${character.id}`}>
+            <button>Delete</button>
         </Link>
     </>
     )

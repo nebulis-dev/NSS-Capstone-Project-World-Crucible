@@ -31,7 +31,7 @@ export const editCharacter = (characterId, characterData) => {
     })
 }
 
-export const deleteCharacter = (characterData) => {
+export const deleteCharacter = (characterId) => {
     return fetch(`${baseURL}/Characters/${characterId}`, {
         method: "DELETE"
     })
@@ -51,6 +51,11 @@ export const getGroup = (groupId) => {
 
 export const getWorldGroups = (worldId) => {
     return fetch(`${baseURL}/Groups?worldId=${worldId}`)
+    .then(res => res.json())
+}
+
+export const getCharacterGrouping = (characterId) => {
+    return fetch (`${baseURL}/CharacterGroups?characterId=${characterId}`)
     .then(res => res.json())
 }
 
