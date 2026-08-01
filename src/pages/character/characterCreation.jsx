@@ -10,7 +10,7 @@ import { createCharacter,
          createCharacterImage,
          getCollectionPath
         } from "../../../api/dataTranslation"
-import { GroupDropdown } from "../../assets/groupDropdownLogic"
+import { GroupDropdown } from "../../components/groupDropdownLogic"
 
 export function CharacterCreation () {
     const navigate = useNavigate()

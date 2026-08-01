@@ -12,7 +12,7 @@ import {
     deleteCharacterGrouping,
     createCharacterImage
 } from "../../../api/dataTranslation"
-import { GroupDropdown } from "../../assets/groupDropdownLogic"
+import { GroupDropdown } from "../../components/groupDropdownLogic"
 
 export function CharacterEditor() {
     const { characterId } = useParams()
