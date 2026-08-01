@@ -37,7 +37,13 @@ export function CharacterCollection () {
             </Link>
         ))}
 
-        <Link to={"/characterCreation"}>
+        <Link to={
+            worldId
+                ? groupId
+                    ?`/worldProfile/${worldId}/groupProfile/${groupId}/characterCreation`
+                    : `/worldProfile/${worldId}/characterCreation`
+                : "/characterCreation"
+        }>
             <button>Create Character</button>
         </Link>
 

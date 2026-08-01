@@ -1,6 +1,5 @@
 const baseURL = "http://localhost:8088"
 
-
 //Character stuff
 export const getCharacter = (characterId) => {
     return fetch(`${baseURL}/Characters/${characterId}`)
@@ -13,6 +12,15 @@ export const createCharacter = (characterData) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(characterData),
     }).then(res => res.json())
+}
+
+export const createCharacterImage = (file) => {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader()
+        reader.onload = () => resolve(reader.result)
+        reader.onerror = reject
+        reader.readAsDataURL(file)
+    })
 }
 
 export const editCharacter = (characterId, characterData) => {
@@ -33,6 +41,7 @@ export const getGenders = () => {
     return fetch(`${baseURL}/Genders`)
     .then(res => res.json())
 }
+
 
 //Group Stuff
 export const getGroup = (groupId) => {
@@ -56,7 +65,7 @@ export const getGroupCharacters = (groupId) => {
     .then(links => Promise.all(links.map(link => getCharacter(link.characterId))))
 }
 
-export const createCharacterGroups = (characterId, groupId) => {
+export const createCharacterGrouping = (characterId, groupId) => {
     return fetch(`${baseURL}/CharacterGroups`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -64,10 +73,21 @@ export const createCharacterGroups = (characterId, groupId) => {
     })
 }
 
-export const deleteCharacterGroup = (characterGroupId) => {
-    return fetch(`${baseURL}/CharacterGroups/${characterGroupId}`, {
+export const deleteCharacterGrouping = (groupingId) => {
+    return fetch(`${baseURL}/CharacterGroups/${groupingId}`, {
         method: "DELETE"
     })
+}
+
+//World Stuff
+export const getUsersWorlds = (userId) => {
+    return fetch(`${baseURL}/Worlds?userId=${userId}`)
+    .then(res => res.json())
+}
+
+export const getWorld = (worldId) => {
+    return fetch(`${baseURL}/Worlds/${worldId}`)
+    .then(res => res.json())
 }
 
 //Scope/Navigation Stuff

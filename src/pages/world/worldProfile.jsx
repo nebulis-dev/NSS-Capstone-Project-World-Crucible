@@ -2,14 +2,14 @@ import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 import { useEffect } from "react"
+import { getWorld } from "../../../api/dataTranslation"
 
 export function WorldProfile () {
     const { worldId } = useParams()
-    const[world, setWorld] = useState(null)
+    const [world, setWorld] = useState(null)
 
     useEffect(() => {
-        fetch(`http://localhost:8088/Worlds/${worldId}`)
-        .then(res => res.json())
+        getWorld(worldId)
         .then(setWorld)
     }, [worldId])
 

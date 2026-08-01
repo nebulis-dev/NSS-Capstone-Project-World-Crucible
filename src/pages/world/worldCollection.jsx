@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { UserAuth } from "../../assets/currentUser"
+import { getUsersWorlds } from "../../../api/dataTranslation"
 
 export function WorldCollection () {
     const { user } = UserAuth()
@@ -8,8 +9,7 @@ export function WorldCollection () {
 
     useEffect(() => {
         if (!user) return
-        fetch(`http://localhost:8088/Worlds?userId=${user.id}`)
-        .then(res => res.json())
+        getUsersWorlds(user.id)
         .then(setWorlds)
     }, [user])
 

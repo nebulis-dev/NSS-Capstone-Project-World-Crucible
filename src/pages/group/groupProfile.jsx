@@ -1,10 +1,9 @@
-import { Link, useParams, useLocation } from "react-router-dom"
+import { Link, useParams, useLocation as location } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { getGroup } from "../../../api/dataTranslation"
 
 export function GroupProfile () {
     const { groupId, worldId } = useParams()
-    const location = useLocation()
     const [group, setGroup] = useState(null)
 
     useEffect(() => {

@@ -10,6 +10,9 @@ export function Hub () {
         <Link to={"/worldCollection"}>
             <button>World Gallery</button>
         </Link>
+        <Link to={"/"}>
+            <button>Log Out?</button>
+        </Link>
     </>
     )
 }
