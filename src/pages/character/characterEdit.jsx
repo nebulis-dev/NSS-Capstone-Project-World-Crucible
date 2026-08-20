@@ -7,10 +7,11 @@ import {
     getWorld,
     getWorldGroups,
     getGenders,
-    getCharacterGroups,
+    getCharacterGrouping,
+    getGroupGroupings,
     createCharacterGrouping,
     deleteCharacterGrouping,
-    createCharacterImage
+    createImage
 } from "../../../api/dataTranslation"
 import { GroupDropdown } from "../../components/groupDropdownLogic"
 
@@ -41,7 +42,7 @@ export function CharacterEditor() {
             getWorldGroups(character.worldId).then(setGroups)
         }
 
-        getCharacterGroups(character.id).then(existingLinks => {
+        getGroupGroupings(character.id).then(existingLinks => {
             reset({
                 name: character.name,
                 biography: character.biography,
@@ -57,7 +58,7 @@ export function CharacterEditor() {
         const file = e.target.files[0]
         if (!file) return
 
-        createCharacterImage(file).then(base64 => {
+        createImage(file).then(base64 => {
             setValue("characterImg", base64)
             setImagePreview(base64)
         })
@@ -72,7 +73,7 @@ export function CharacterEditor() {
             genderId: Number(characterFields.genderId)
         })
         .then(() => {
-            getCharacterGroups(characterId).then(existingLinks => {
+            getGroupGroupings(characterId).then(existingLinks => {
                 const existingGroupIds = existingLinks.map(link => link.groupId)
 
                 const toAdd = selectedGroupIds.filter(id => !existingGroupIds.includes(id))

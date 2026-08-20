@@ -15,13 +15,24 @@ export function WorldCollection () {
 
     return (
     <>
-        <h2>this is the World Collection Page</h2>
+        <h2>Your Worlds!</h2>
 
-        {worlds.map(world => (
-            <Link key={world.id} to={`/worldProfile/${world.id}`}>
-                <button>{world.name}</button>
-            </Link>
-        ))}
+        <div className="world-list">
+            {worlds.map(world => (
+               <Link
+               key={world.id}
+                to={`/worldProfile/${world.id}`}
+                className="world-card"
+           >
+                <img
+                    src={world.worldImg}
+                    alt={world.name}
+                    className="world-card__image"
+                />
+                    <span className="world-card__name">{world.name}</span>
+                </Link>
+            ))}
+        </div>
 
         <Link to={"/worldCreation"}>
             <button>World Creator</button>

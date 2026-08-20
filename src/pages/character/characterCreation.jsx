@@ -7,7 +7,7 @@ import { createCharacter,
          getGenders,
          getWorldGroups,
          createCharacterGrouping,
-         createCharacterImage,
+         createImage,
          getCollectionPath
         } from "../../../api/dataTranslation"
 import { GroupDropdown } from "../../components/groupDropdownLogic"
@@ -56,7 +56,7 @@ export function CharacterCreation () {
         const file = e.target.files[0]
         if (!file) return
         
-        const superCharacterImage64 = await createCharacterImage(file)
+        const superCharacterImage64 = await createImage(file)
         setValue("characterImg", superCharacterImage64)
         setImagePreview(superCharacterImage64)
     }

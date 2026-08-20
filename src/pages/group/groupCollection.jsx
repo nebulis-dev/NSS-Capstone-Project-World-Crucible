@@ -24,7 +24,7 @@ export function GroupCollection () {
             </Link>
         ))}
 
-        <Link to={"/groupCreation"}>
+        <Link to={`/worldProfile/${worldId}/groupCreation`}>
             <button>Create Group</button>
         </Link>
 

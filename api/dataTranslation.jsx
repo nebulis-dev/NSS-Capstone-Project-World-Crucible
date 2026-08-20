@@ -10,11 +10,11 @@ export const createCharacter = (characterData) => {
     return fetch(`${baseURL}/Characters`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(characterData),
+        body: JSON.stringify(characterData)
     }).then(res => res.json())
 }
 
-export const createCharacterImage = (file) => {
+export const createImage = (file) => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader()
         reader.onload = () => resolve(reader.result)
@@ -59,8 +59,8 @@ export const getCharacterGrouping = (characterId) => {
     .then(res => res.json())
 }
 
-export const getCharacterGroups = (characterId) => {
-    return fetch(`${baseURL}/CharacterGroups?characterId=${characterId}`)
+export const getGroupGroupings = (groupId) => {
+    return fetch(`${baseURL}/CharacterGroups?characterId=${groupId}`)
     .then(res => res.json())
 }
 
@@ -68,6 +68,28 @@ export const getGroupCharacters = (groupId) => {
     return fetch(`${baseURL}/CharacterGroups?groupId=${groupId}`)
     .then(res => res.json())
     .then(links => Promise.all(links.map(link => getCharacter(link.characterId))))
+}
+
+export const createGroup = (groupData) => {
+    return fetch(`${baseURL}/Groups/`, {
+        method: "POST",
+        headers: { "Content-Type" : "application.json" },
+        body: JSON.stringify(groupData)
+    }).then(res => res.json())
+}
+
+export const editGroup = (groupId, groupData) => {
+    return fetch(`${baseURL}/Groups/${groupId}`, {
+        method: "PATCH",
+        headers: { "Content-Type" : "application.json" },
+        body: JSON.stringify(groupData)
+    })
+}
+
+export const deleteGroup = (groupId) => {
+    return fetch(`${baseURL}/Groups/${groupId}`), {
+        method: "DELETE"
+    }
 }
 
 export const createCharacterGrouping = (characterId, groupId) => {
@@ -95,6 +117,41 @@ export const getWorld = (worldId) => {
     .then(res => res.json())
 }
 
+export const createWorld = (worldData) => {
+    fetch(`${baseURL}/Worlds`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(worldData)
+    }).then(res => res.json())
+}
+
+export const editWorld = (worldId, worldData) => {
+    fetch(`${baseURL}/Worlds/${worldId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(worldData)
+    })
+}
+
+export const deleteWorld = (worldId) => {
+    fetch(`${baseURL}/Worlds/${worldId}`, { 
+        method: "DELETE" 
+    })
+}
+
+export const getWorldCharacters = (worldId) => {
+    fetch(`${baseURL}/Characters?worldId=${worldId}`)
+    .then(res => res.json())
+}
+
+export const unassignCharacterWorld = (characterId) => {
+    fetch(`${baseURL}/Characters/${characterId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ worldId: null })
+    })
+}
+
 //Scope/Navigation Stuff
 export function scopeGetter({ groupId, worldId }, { group, world, fallback }) {
     if (groupId) {
@@ -112,6 +169,10 @@ export function getCollectionPath(character) {
         world: `/worldProfile/${character.worldId}/characterCollection`,
         fallback: `/characterCollection`
     })
+}
+
+export function getGroupCollectionPath(worldId) {
+    return `/worldProfile/${worldId}/groupCollection`
 }
 
 export function getParentPath(character) {

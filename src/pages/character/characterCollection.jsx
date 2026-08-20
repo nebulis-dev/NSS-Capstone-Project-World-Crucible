@@ -29,13 +29,23 @@ export function CharacterCollection () {
 
     return (
     <>
-        <h2>this is Character Collection Page</h2>
-
+        <h2>Character Collection</h2>
+        <div className="character-grid">
         {characters.map(character => (
-            <Link key={character.id} to={`/characterProfile/${character.id}`} state={{ groupId, worldId}}>
-                <button>{character.name}</button>
+            <Link key={character.id} 
+            to={`/characterProfile/${character.id}`} 
+            state={{ groupId, worldId}}
+            className="character-card"
+            >
+                <img
+                    src={character.characterImg}
+                    alt={character.name}
+                    className="character-card__image"
+                />
+                <span className="character-card_name">{character.name}</span>
             </Link>
         ))}
+        </div>
 
         <Link to={
             worldId

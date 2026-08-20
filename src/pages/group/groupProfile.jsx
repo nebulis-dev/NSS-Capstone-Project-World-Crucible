@@ -16,7 +16,9 @@ export function GroupProfile () {
     return (
     <>
         <h1>{group.name}</h1>
+
         <p>{group.description}</p>
+
         <Link to={`/worldProfile/${worldId}/groupProfile/${groupId}/characterCollection`}>
             <button>Group Characters</button>
         </Link>
@@ -24,9 +26,11 @@ export function GroupProfile () {
         <Link to={`/worldProfile/${worldId}`}>
             <button>Go to World</button>
         </Link>
+
         <Link to={`/worldProfile/${worldId}/groupCollection`}>
             <button>Return</button>
         </Link>
+        
         <Link to={`/groupEditor/${groupId}`}>
             <button>Edit</button>
         </Link>
