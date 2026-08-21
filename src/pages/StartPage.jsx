@@ -3,13 +3,17 @@ import { Link } from "react-router-dom"
 export function StartPage () {
     return (
     <>
-        <h1>Welcome to the Crucible!</h1>
-        <Link to={"/register"}>
-            <button>New Here?</button>
-        </Link>
-        <Link to={"/login"}>
-            <button>Old Here?</button>
-        </Link>
+        <div className="start">
+            <h1 className="start-title">Welcome to Crucible!</h1>
+            <div className="hub-links">
+                <Link to={"/register"} className="start-accReg">
+                    New Here?
+                </Link>
+                <Link to={"/login"} className="hub-accLog">
+                    Old Here?
+                </Link>
+            </div>
+        </div>
     </>
     )
 }

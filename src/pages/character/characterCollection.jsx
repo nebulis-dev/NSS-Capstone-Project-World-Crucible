@@ -42,7 +42,7 @@ export function CharacterCollection () {
                     alt={character.name}
                     className="character-card__image"
                 />
-                <span className="character-card_name">{character.name}</span>
+                <span className="character-card__name">{character.name}</span>
             </Link>
         ))}
         </div>
